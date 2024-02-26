@@ -1,0 +1,157 @@
+{
+  // Customization Settings
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono Medium'",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Editor Settings
+  "editor.stickyScroll.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.mouseWheelZoom": true,
+  "editor.linkedEditing": true,
+  "diffEditor.wordWrap": "on",
+
+  // Emmet Settings
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+
+  // Extensions
+  "extensions.autoUpdate": false,
+
+  // Terminal Settings
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.profiles.windows": {
+    "JavaScript Debug Terminal": null,
+
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    }
+  },
+
+  // Code Runner Settings
+
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.runInTerminal": true,
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.executorMap": {
+    "javascript": "node $fileName",
+    "java": "javac $fileName -d dist\\ && java -cp dist $fileNameWithoutExt" /*dist Directory*/,
+    // "java": "javac $fileName && java $fileNameWithoutExt", /*Same Directory*/
+
+    "c": "gcc $fileName -o dist\\$fileNameWithoutExt && dist\\$fileNameWithoutExt" /*dist Directory*/,
+    // "c": "gcc $fileName -o $fileNameWithoutExt && $fileNameWithoutExt", /*Same Directory*/
+
+    "cpp": "g++ $fileName -o dist\\$fileNameWithoutExt && dist\\$fileNameWithoutExt" /*dist Directory*/,
+    // "cpp": "g++ $fileName -o $fileNameWithoutExt && $fileNameWithoutExt", /*Same Directory*/
+
+    "python": "python -u $fileName",
+
+    "typescript": "tsc $fileName --outDir dist && node dist\\$fileNameWithoutExt.js" /*dist Directory*/,
+    // "typescript": "tsc $fileName && node $fileNameWithoutExt.js", /*Same Directory*/
+
+    "dart": "dart $fileName",
+
+    "mojo": "mojo $fileName",
+
+    "latex": "pdflatex $fileName -output-directory=dist/ && Get-ChildItem -Path 'dist/' -File | Where-Object { $_.Name -ne '$fileNameWithoutExt.pdf' } | Remove-Item -Force" /*dist Directory*/,
+    // "latex": "pdflatex $fileName && Get-ChildItem  -Path 'dist/' -File | Where-Object { $_.Name -notin ('$fileNameWithoutExt.tex', '$fileNameWithoutExt.pdf') } | Remove-Item -Force", /*Same Directory*/
+
+    "scss": "sass $fileName dist/$fileNameWithoutExt.css" /*dist Directory*/,
+    // "scss": "sass $fileName $fileNameWithoutExt.css" /*Same Directory*/
+
+    "rust": "rustc $fileName && ./$fileNameWithoutExt" /*Same Directory*/
+    // "rust":  /*dist Directory*/
+  },
+
+  "code-runner.languageIdToFileExtensionMap": {
+    "bat": ".bat",
+    "powershell": ".ps1",
+    "typescript": ".ts",
+    "latex": ".tex",
+    "sass": ".scss",
+    "mojo": ".mojo"
+  },
+
+  // LaTeX Settings
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.outDir": "%DIR%/dist",
+
+  // Python Environment Settings
+  "python.defaultInterpreterPath": "C:\\UserProgramFiles\\Python\\python.exe",
+
+  // Dart Environment Settings
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+
+  // Markdown Settings
+  "markdown.extension.toc.updateOnSave": false,
+
+  // SVG Preview Settings
+  "svg.preview.mode": "svg",
+
+  // Formatiing Settings
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+
+  // php Settings
+  "php.validate.executablePath": "C:/UserProgramFiles/Xampp/php/php.exe"
+}
