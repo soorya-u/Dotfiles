@@ -9,6 +9,7 @@
   "editor.wordWrap": "on",
   "editor.mouseWheelZoom": true,
   "editor.linkedEditing": true,
+  "editor.tabSize": 2,
   "diffEditor.wordWrap": "on",
 
   // Emmet Settings
