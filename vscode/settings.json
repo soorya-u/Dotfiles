@@ -10,6 +10,7 @@
   "editor.mouseWheelZoom": true,
   "editor.linkedEditing": true,
   "editor.tabSize": 2,
+  "editor.lineNumbers": "relative",
   "diffEditor.wordWrap": "on",
 
   // Emmet Settings
@@ -48,34 +49,18 @@
   "code-runner.saveFileBeforeRun": true,
   "code-runner.runInTerminal": true,
   "code-runner.fileDirectoryAsCwd": true,
+
   "code-runner.executorMap": {
     "javascript": "node $fileName",
-    "java": "javac $fileName -d dist\\ && java -cp dist $fileNameWithoutExt" /*dist Directory*/,
-    // "java": "javac $fileName && java $fileNameWithoutExt", /*Same Directory*/
-
-    "c": "gcc $fileName -o dist\\$fileNameWithoutExt && dist\\$fileNameWithoutExt" /*dist Directory*/,
-    // "c": "gcc $fileName -o $fileNameWithoutExt && $fileNameWithoutExt", /*Same Directory*/
-
-    "cpp": "g++ $fileName -o dist\\$fileNameWithoutExt && dist\\$fileNameWithoutExt" /*dist Directory*/,
-    // "cpp": "g++ $fileName -o $fileNameWithoutExt && $fileNameWithoutExt", /*Same Directory*/
-
+    "java": "javac $fileName -d dist\\ && java -cp dist $fileNameWithoutExt",
+    "c": "gcc $fileName -o dist\\$fileNameWithoutExt && dist\\$fileNameWithoutExt",
+    "cpp": "g++ $fileName -o dist\\$fileNameWithoutExt && dist\\$fileNameWithoutExt",
     "python": "python -u $fileName",
-
-    "typescript": "tsc $fileName --outDir dist && node dist\\$fileNameWithoutExt.js" /*dist Directory*/,
-    // "typescript": "tsc $fileName && node $fileNameWithoutExt.js", /*Same Directory*/
-
-    "dart": "dart $fileName",
-
+    "typescript": "tsc $fileName --outDir dist && node dist\\$fileNameWithoutExt.js",
     "mojo": "mojo $fileName",
-
-    "latex": "pdflatex $fileName -output-directory=dist/ && Get-ChildItem -Path 'dist/' -File | Where-Object { $_.Name -ne '$fileNameWithoutExt.pdf' } | Remove-Item -Force" /*dist Directory*/,
-    // "latex": "pdflatex $fileName && Get-ChildItem  -Path 'dist/' -File | Where-Object { $_.Name -notin ('$fileNameWithoutExt.tex', '$fileNameWithoutExt.pdf') } | Remove-Item -Force", /*Same Directory*/
-
-    "scss": "sass $fileName dist/$fileNameWithoutExt.css" /*dist Directory*/,
-    // "scss": "sass $fileName $fileNameWithoutExt.css" /*Same Directory*/
-
-    "rust": "rustc $fileName && ./$fileNameWithoutExt" /*Same Directory*/
-    // "rust":  /*dist Directory*/
+    "latex": "pdflatex $fileName -output-directory=dist/ && Get-ChildItem -Path 'dist/' -File | Where-Object { $_.Name -ne '$fileNameWithoutExt.pdf' } | Remove-Item -Force",
+    "scss": "sass $fileName dist/$fileNameWithoutExt.css",
+    "rust": "rustc --out-dir dist/ $fileName && ./dist/$fileNameWithoutExt"
   },
 
   "code-runner.languageIdToFileExtensionMap": {
@@ -93,17 +78,6 @@
 
   // Python Environment Settings
   "python.defaultInterpreterPath": "C:\\UserProgramFiles\\Python\\python.exe",
-
-  // Dart Environment Settings
-  "[dart]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true,
-    "editor.selectionHighlight": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.suggestSelection": "first",
-    "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": "off"
-  },
 
   // Markdown Settings
   "markdown.extension.toc.updateOnSave": false,
@@ -154,5 +128,10 @@
   },
 
   // php Settings
-  "php.validate.executablePath": "C:/UserProgramFiles/Xampp/php/php.exe"
+  "php.validate.executablePath": "C:/UserProgramFiles/Xampp/php/php.exe",
+
+  // vim Settings
+  "vim.commandLineModeKeyBindings": [],
+  "vim.easymotion": true,
+  "vim.enableNeovim": true
 }
