@@ -5,3 +5,4 @@
 [[ -f  ~/.config/zsh/aliases.zsh ]] && source ~/.config/zsh/aliases.zsh
 [[ -f  ~/.config/zsh/zsh-highlighting.zsh ]] && source ~/.config/zsh/zsh-highlighting.zsh
 [[ -f  ~/.config/zsh/moduler-mojo.zsh ]] && source ~/.config/zsh/moduler-mojo.zsh
+[[ -f  ~/.config/zsh/gpg-config.zsh ]] && source ~/.config/zsh/gpg-config.zsh
