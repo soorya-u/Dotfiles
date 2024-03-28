@@ -1,0 +1,70 @@
+{
+	"React Functional Component": {
+		"prefix": "rfc",
+		"body": [
+			"export default function ${1:ComponentName}() {",
+			"    return (",
+			"      $0",
+			"    );",
+			"}"
+		],
+		"description": "React Functional Component"
+	},
+	"React Functional Component with Props": {
+		"prefix": "rfcp",
+		"body": [
+			"type ${1:ComponentName}Props = {",
+			"  $2",
+			"}",
+			"export default function ${1:ComponentName}(props: ${1:ComponentName}Props) {",
+			"    return (",
+			"      $0",
+			"    );",
+			"}"
+		],
+		"description": "React Functional Component with Props"
+	},
+	"Async React Functional Component": {
+		"prefix": "arfc",
+		"body": [
+			"export default async function ${1:ComponentName}() {",
+			"    return (",
+			"      $0",
+			"    );",
+			"}"
+		],
+		"description": "Async React Functional Component"
+	},
+	"Async React Functional Component with Props": {
+		"prefix": "arfcp",
+		"body": [
+			"type ${1:ComponentName}Props = {",
+			"  $2",
+			"}",
+			"export default async function ${1:ComponentName}(props: ${1:ComponentName}Props) {",
+			"    return (",
+			"      $0",
+			"    );",
+			"}"
+		],
+		"description": "Async React Functional Component with Props"
+	},
+	"React useState Hook": {
+		"prefix": "us",
+		"body": [
+			"const [${1:state}, set${2:State}] = useState(${3})",
+			"$0"
+		],
+		"description": "React useState Hook"
+	},
+	"React useEffect Hook": {
+		"prefix": "ue",
+		"body": [
+			"useEffect(() => {",
+			"  $1",
+			"}, [$2]);",
+			"$0"
+		],
+		"description": "React useEffect Hook"
+	}
+}
