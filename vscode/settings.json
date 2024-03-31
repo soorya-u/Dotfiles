@@ -1,10 +1,11 @@
 {
-  // Customization Settings
-  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono Medium'",
-  "editor.fontLigatures": true,
+  // Themes
+  "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "material-icon-theme",
 
   // Editor Settings
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono Medium'",
   "editor.stickyScroll.enabled": false,
   "editor.wordWrap": "on",
   "editor.mouseWheelZoom": true,
@@ -18,7 +19,7 @@
     "javascript": "javascriptreact"
   },
 
-  // Extensions
+  // Extensions Settings
   "extensions.autoUpdate": false,
 
   // Terminal Settings
@@ -72,18 +73,10 @@
     "mojo": ".mojo"
   },
 
-  // LaTeX Settings
-  "latex-workshop.latex.autoBuild.run": "never",
-  "latex-workshop.latex.outDir": "%DIR%/dist",
-
-  // Python Environment Settings
-  "python.defaultInterpreterPath": "C:\\UserProgramFiles\\Python\\python.exe",
-
-  // Markdown Settings
-  "markdown.extension.toc.updateOnSave": false,
-
-  // SVG Preview Settings
-  "svg.preview.mode": "svg",
+  // Vim Settings
+  "vim.commandLineModeKeyBindings": [],
+  "vim.easymotion": true,
+  "vim.enableNeovim": true,
 
   // Formatiing Settings
   "[html]": {
@@ -128,10 +121,18 @@
   },
 
   // php Settings
-  "php.validate.executablePath": "C:/UserProgramFiles/Xampp/php/php.exe",
+  "php.validate.executablePath": "C:\\UserProgramFiles\\Xampp\\php\\php.exe",
 
-  // vim Settings
-  "vim.commandLineModeKeyBindings": [],
-  "vim.easymotion": true,
-  "vim.enableNeovim": true
+  // LaTeX Settings
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.outDir": "%DIR%/dist",
+
+  // Python Environment Settings
+  "python.defaultInterpreterPath": "C:\\UserProgramFiles\\Python\\python.exe",
+
+  // Markdown Settings
+  "markdown.extension.toc.updateOnSave": false,
+
+  // SVG Preview Settings
+  "svg.preview.mode": "svg"
 }
