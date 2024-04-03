@@ -32,17 +32,24 @@
 
     "PowerShell": {
       "source": "PowerShell",
-      "icon": "terminal-powershell"
+      "icon": "terminal-powershell",
+      "color": "terminal.ansiBlue",
+      "overrideName": false
+    },
+    "Ubuntu": {
+      "id": "Ubuntu",
+      "title": "Ubuntu",
+      "extensionIdentifier": "ms-vscode.remote-wsl",
+      "path": "wsl.exe",
+      "args": ["-d", "Ubuntu-22.04"],
+      "color": "terminal.ansiRed",
+      "icon": "terminal-bash",
+      "overrideName": false
     },
 
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    }
+    "Ubuntu-22.04 (WSL)": null,
+    "Command Prompt": null,
+    "Git Bash": null
   },
 
   // Code Runner Settings
@@ -52,16 +59,16 @@
   "code-runner.fileDirectoryAsCwd": true,
 
   "code-runner.executorMap": {
-    "javascript": "node $fileName",
-    "java": "javac $fileName -d dist\\ && java -cp dist $fileNameWithoutExt",
     "c": "gcc $fileName -o dist\\$fileNameWithoutExt && dist\\$fileNameWithoutExt",
     "cpp": "g++ $fileName -o dist\\$fileNameWithoutExt && dist\\$fileNameWithoutExt",
-    "python": "python -u $fileName",
-    "typescript": "tsc $fileName --outDir dist && node dist\\$fileNameWithoutExt.js",
-    "mojo": "mojo $fileName",
+    "java": "javac $fileName -d dist\\ && java -cp dist $fileNameWithoutExt",
+    "javascript": "bun $fileName",
     "latex": "pdflatex $fileName -output-directory=dist/ && Get-ChildItem -Path 'dist/' -File | Where-Object { $_.Name -ne '$fileNameWithoutExt.pdf' } | Remove-Item -Force",
+    "mojo": "mojo $fileName",
+    "python": "python -u $fileName",
+    "rust": "rustc --out-dir dist/ $fileName && ./dist/$fileNameWithoutExt",
     "scss": "sass $fileName dist/$fileNameWithoutExt.css",
-    "rust": "rustc --out-dir dist/ $fileName && ./dist/$fileNameWithoutExt"
+    "typescript": "bun $fileName"
   },
 
   "code-runner.languageIdToFileExtensionMap": {
@@ -121,7 +128,7 @@
   },
 
   // php Settings
-  "php.validate.executablePath": "C:\\UserProgramFiles\\Xampp\\php\\php.exe",
+  "php.validate.executablePath": "C:/UserProgramFiles/Xampp/php/php.exe",
 
   // LaTeX Settings
   "latex-workshop.latex.autoBuild.run": "never",
