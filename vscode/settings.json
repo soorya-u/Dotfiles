@@ -2,6 +2,7 @@
   // Themes
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.productIconTheme": "macos-modern",
 
   // Editor Settings
   "editor.fontLigatures": true,
@@ -141,5 +142,10 @@
   "markdown.extension.toc.updateOnSave": false,
 
   // SVG Preview Settings
-  "svg.preview.mode": "svg"
+  "svg.preview.mode": "svg",
+  
+  // Tailwind Fold Settings
+  "tailwind-fold.foldStyle": "QUOTES",
+  "tailwind-fold.unfoldIfLineSelected": true,
+  "tailwind-fold.showTailwindImage": false
 }
