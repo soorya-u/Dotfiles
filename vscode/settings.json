@@ -14,10 +14,27 @@
   "editor.tabSize": 2,
   "editor.lineNumbers": "relative",
   "diffEditor.wordWrap": "on",
+  "security.workspace.trust.untrustedFiles": "open",
 
   // Emmet Settings
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
+  },
+
+  // Formatter Settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
   },
 
   // Extensions Settings
@@ -81,71 +98,44 @@
     "mojo": ".mojo"
   },
 
-  // Vim Settings
-  "vim.commandLineModeKeyBindings": [],
-  "vim.easymotion": true,
-  "vim.enableNeovim": true,
-
-  // Formatiing Settings
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[mdx]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
-  "[python]": {
-    "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.autopep8"
-  },
-
-  // php Settings
+  // PATH Settings
   "php.validate.executablePath": "C:/UserProgramFiles/Xampp/php/php.exe",
+  "python.defaultInterpreterPath": "C:\\UserProgramFiles\\Python\\python.exe",
 
   // LaTeX Settings
   "latex-workshop.latex.autoBuild.run": "never",
   "latex-workshop.latex.outDir": "%DIR%/dist",
-
-  // Python Environment Settings
-  "python.defaultInterpreterPath": "C:\\UserProgramFiles\\Python\\python.exe",
 
   // Markdown Settings
   "markdown.extension.toc.updateOnSave": false,
 
   // SVG Preview Settings
   "svg.preview.mode": "svg",
-  
+
   // Tailwind Fold Settings
   "tailwind-fold.foldStyle": "QUOTES",
   "tailwind-fold.unfoldIfLineSelected": true,
-  "tailwind-fold.showTailwindImage": false
+  "tailwind-fold.showTailwindImage": false,
+
+  // Material Icon Settings
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "material-icon-theme.files.associations": {
+    "": ""
+  },
+  "material-icon-theme.folders.associations": {
+    "src-tauri": "Server",
+    "components": "Components",
+    "primitives": "React-components"
+  },
+
+  // Vim Settings
+  "vim.commandLineModeKeyBindings": [],
+  "vim.easymotion": true,
+  "vim.enableNeovim": true,
+  "vim.neovimConfigPath": "C:\\Users\\USERNAME\\AppData\\Local\\nvim\\init.lua",
+  "vim.neovimPath": "C:\\tools\\neovim\\nvim-win64\\bin\\nvim.exe",
+  "vim.neovimUseConfigFile": true,
+  "vim.replaceWithRegister": true,
+  "vim.useCtrlKeys": false
 }
