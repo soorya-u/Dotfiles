@@ -21,22 +21,6 @@
     "javascript": "javascriptreact"
   },
 
-  // Formatter Settings
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[dockercompose]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  },
-  "[python]": {
-    "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.autopep8"
-  },
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
-
   // Extensions Settings
   "extensions.autoUpdate": false,
 
@@ -71,7 +55,6 @@
   },
 
   // Code Runner Settings
-
   "code-runner.saveFileBeforeRun": true,
   "code-runner.runInTerminal": true,
   "code-runner.fileDirectoryAsCwd": true,
@@ -137,5 +120,47 @@
   "vim.neovimPath": "C:\\tools\\neovim\\nvim-win64\\bin\\nvim.exe",
   "vim.neovimUseConfigFile": true,
   "vim.replaceWithRegister": true,
-  "vim.useCtrlKeys": false
+  "vim.useCtrlKeys": false,
+
+  // Zig Settings
+  "zig.initialSetupDone": true,
+
+  // Formatter Settings
+  "[dockercompose]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
