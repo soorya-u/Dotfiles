@@ -16,7 +16,7 @@ error_symbol = '[❯](202)'
 # ---
 
 [os]
-format = '[$symbol](202) '   
+format = '[$symbol](202) '
 disabled = false
 
 [os.symbols]
@@ -74,7 +74,7 @@ ahead = ' ⇡${count}'
 diverged = ' ⇕⇡${ahead_count}⇣${behind_count}'
 behind = ' ⇣${count}'
 stashed = '  '
-modified =  ' '
+modified = ' '
 staged = ' [++\($count\)](green)'
 renamed = ' 襁 '
 deleted = ' '
@@ -91,25 +91,43 @@ format = '[\[$symbol($version(-$name))\]]($style)'
 version_format = 'v${major}.${minor}'
 symbol = ' '
 detect_extensions = ['c', 'h']
-commands = [ [ 'cc', '--version' ], [ 'gcc', '--version' ], [ 'clang', '--version' ] ]
+commands = [['cc', '--version'], ['gcc', '--version'], ['clang', '--version']]
 style = '12'
 disabled = false
 
-[dart]
+[golang]
 format = '[\[$symbol($version)\]]($style)'
 version_format = 'v${major}.${minor}'
-symbol = ' '
-detect_extensions = ['dart']
-detect_files = ['pubspec.yaml', 'pubspec.yml', 'pubspec.lock']
-detect_folders = ['.dart_tool']
-style = '49'
+symbol = ' '
+detect_extensions = ['go']
+detect_files = [
+  'go.mod',
+  'go.sum',
+  'go.work',
+  'glide.yaml',
+  'Gopkg.yml',
+  'Gopkg.lock',
+  '.go-version',
+]
+detect_folders = ['Godeps']
+style = '39'
+not_capable_style = 'bold red'
 disabled = false
 
 [java]
 format = '[\[$symbol($version)\]]($style)'
 version_format = 'v${major}.${minor}'
 detect_extensions = ['java', 'class', 'gradle', 'jar', 'cljs', 'cljc']
-detect_files = ['pom.xml', 'build.gradle.kts', 'build.sbt', '.java-version', 'deps.edn', 'project.clj', 'build.boot', '.sdkmanrc']
+detect_files = [
+  'pom.xml',
+  'build.gradle.kts',
+  'build.sbt',
+  '.java-version',
+  'deps.edn',
+  'project.clj',
+  'build.boot',
+  '.sdkmanrc',
+]
 detect_folders = []
 symbol = ' '
 style = '160'
@@ -136,12 +154,34 @@ style = '68'
 disabled = false
 
 [python]
-format = '[\[$symbol($version)\]]($style)'
-version_format='v${major}.${minor}'
+format = '[\[$symbol($pyenv_prefix-$version)\]]($style)'
+version_format = 'v${major}.${minor}'
 symbol = "󰌠 "
 style = '184'
-detect_extensions=['py']
-pyenv_version_name = false
+detect_extensions = ['py']
+pyenv_version_name = true
 python_binary = ['python', 'python3']
+pyenv_prefix = 'env'
 detect_files = ['__init__.py', 'requirements.txt']
+disabled = false
+
+
+[rust]
+format = '[\[$symbol($version)\]]($style)'
+version_format = 'v${major}.${minor}'
+symbol = ' '
+detect_extensions = ['rs']
+detect_files = ['Cargo.toml']
+detect_folders = []
+style = '202'
+disabled = false
+
+[zig]
+format = '[\[$symbol($version)\]]($style)'
+version_format = 'v${major}.${minor}'
+symbol = ' '
+detect_extensions = ['zig']
+detect_files = ['Cargo.toml']
+detect_folders = []
+style = '214'
 disabled = false
