@@ -5,8 +5,7 @@ $scripts = @(
     "env.ps1"
     "path.ps1"
     "loaders.ps1"
-    "plugins.ps1"
-    "extras.ps1"
+    "setters.ps1"
 )
 
 foreach ($s in $scripts) {
