@@ -11,14 +11,8 @@ scripts=(
     extras.sh
 )
 
-script_paths=()
-
-for s in "${scripts[@]}"; do
-  script_paths+=("$SCRIPT_DIR/$s")
-done
-
 # Loop and source each if it exists
-for cfg in "${script_paths[@]}"; do
-    [[ -f "$cfg" ]] && source "$cfg"
+for s in "${scripts[@]}"; do
+    scriptPath="$SCRIPT_DIR/$s"
+    [[ -s "$scriptPath" ]] && . "$scriptPath"
 done
-
