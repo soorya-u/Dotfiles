@@ -1,12 +1,9 @@
-[helpers]
+[starship.files]
+"starship.toml.templ" = { target = "~/.config/starship.toml", type = "template" }
 
-[default]
-depends = []
-
-[default.files]
-zshrc = "~/.zshrc"
-
-[default.variables]
+[vscode.files]
+"vscode/settings.json" = { target = "~/.config/Code/User/settings.json", type = "symbolic" }
+"vscode/keybindings.json" = { target = "~/.config/Code/User/keybindings.json", type = "symbolic" }
 
 [settings]
 default_target_type = "automatic"

@@ -1,3 +1,17 @@
-if (Test-Path $HOME\.config\powershell\aliases.ps1) { . $HOME\.config\powershell\aliases.ps1 }
-if (Test-Path $HOME\.config\powershell\color-scheme.ps1) { . $HOME\.config\powershell\color-scheme.ps1 }
-if (Test-Path $HOME\.config\powershell\starship-init.ps1) { . $HOME\.config\powershell\starship-init.ps1 }
+$ScriptDir = "$HOME\.dotfiles\scripts\powershell"
+
+$scripts = @(
+    "aliases.ps1"
+    "env.ps1"
+    "path.ps1"
+    "loaders.ps1"
+    "plugins.ps1"
+    "extras.ps1"
+)
+
+foreach ($s in $scripts) {
+    $scriptPath = Join-Path $ScriptDir $s
+    if (Test-Path $scriptPath) {
+        . $scriptPath 
+    }
+}

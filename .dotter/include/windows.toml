@@ -1,0 +1,10 @@
+[powershell.files]
+"profile.ps1" = { target = "~/Documents/PowerShell/Microsoft.PowerShell_profile.ps1", type = "symbolic" }
+
+[starship.variables]
+primary_color = 12
+directory_style = "bold 153"
+
+[vscode.files]
+"vscode/settings.json" = { target = "~/AppData/Roaming/Code/User/settings.json", type = "symbolic" }
+"vscode/keybindings.json" = { target = "~/AppData/Roaming/Code/User/keybindings.json", type = "symbolic" }
