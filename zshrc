@@ -1,6 +1,6 @@
 # List of Zsh scripts
 
-SCRIPT_DIR="$HOME/.dotfiles/sh"
+SCRIPT_DIR="$HOME/.dotfiles/scripts/shell"
 
 scripts=(
     aliases.sh
