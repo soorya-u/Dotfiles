@@ -1,0 +1,9 @@
+[zsh.files]
+zshrc = { target = "~/.zshrc", type = "symbolic" }
+
+[starship.variables]
+primary_color = 202
+directory_style = 214
+
+[ghostty.files]
+ghostty = { target = "~/.config/ghostty/config", type = "symbolic" }
