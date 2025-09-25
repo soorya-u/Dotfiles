@@ -1,0 +1,2 @@
+includes = [".dotter/include/windows.toml"]
+packages = ["powershell", "starship", "vscode"]
