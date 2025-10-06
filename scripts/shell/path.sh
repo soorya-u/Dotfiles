@@ -5,6 +5,8 @@ my_paths=(
     "$HOME/.bun/bin" # bun global path
     "$HOME/.modular/pkg/packages.modular.com_mojo/bin" # modular global path
     "/snap/bin" # snap binaries
+    "$HOME/.zvm/bin"
+    "$ZVM_INSTALL"
 )
 
 # Loop through and add only if directory exists and not already in PATH
