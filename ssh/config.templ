@@ -1,0 +1,23 @@
+{{#if has_work_github}}
+
+Host github.self
+  User git
+  HostName github.com
+  IdentityFile {{ self.ssh }}
+  IdentitiesOnly yes
+
+Host github.work
+  User git
+  HostName github.com
+  IdentityFile {{ work.ssh }}
+  IdentitiesOnly yes
+
+{{else}}
+
+Host github.com
+  User git
+  HostName github.com
+  IdentityFile {{ self.ssh }}
+  IdentitiesOnly yes
+
+{{/if}}

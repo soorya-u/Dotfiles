@@ -6,4 +6,4 @@ primary_color = 202
 directory_style = 214
 
 [ghostty.files]
-ghostty = { target = "~/.config/ghostty/config", type = "symbolic" }
+"ghostty/config" = { target = "~/.config/ghostty/config", type = "symbolic" }

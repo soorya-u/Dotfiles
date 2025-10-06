@@ -1,9 +1,21 @@
 [starship.files]
-"starship.toml.templ" = { target = "~/.config/starship.toml", type = "template" }
+"starship/starship.toml.templ" = { target = "~/.config/starship.toml", type = "template" }
 
 [vscode.files]
 "vscode/settings.json" = { target = "~/.config/Code/User/settings.json", type = "symbolic" }
 "vscode/keybindings.json" = { target = "~/.config/Code/User/keybindings.json", type = "symbolic" }
+
+[wezterm.files]
+"wezterm/wezterm.lua" = { target = "~/.config/wezterm/wezterm.lua", type = "symbolic" }
+
+[ssh.files]
+"ssh/config.templ" = { target = "~/.ssh/config", type = "template" }
+
+[git.files]
+"git/.gitconfig.templ" = { target = "~/.gitconfig", type = "template" }
+
+[packages.variables]
+has_work_github = false
 
 [settings]
 default_target_type = "automatic"

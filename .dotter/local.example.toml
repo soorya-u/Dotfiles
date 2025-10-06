@@ -1,2 +1,15 @@
 includes = [".dotter/include/windows.toml"]
 packages = ["powershell", "starship", "vscode"]
+
+[files]
+
+# For Professional
+[variables]
+has_work_github = true
+self = { email = "johndoe@example.com", ssh = "~/.ssh/github/id_ed25519_self" }
+work = { email = "johndoe@acme.com", ssh = "~/.ssh/github/id_ed25519_work" }
+
+
+# For Personal
+# [variables]
+# self = { email = "johndoe@example.com", ssh = "~/.ssh/github/self" }

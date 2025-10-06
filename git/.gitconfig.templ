@@ -1,0 +1,32 @@
+{{#if has_work_github}}
+[user]
+    name = Soorya U
+    email = {{ work.email }}
+    signingkey = {{ work.ssh }}.pub
+
+[alias]
+    self =  "!git config user.email '{{ self.email }}' && git config user.signingkey {{ self.ssh }}.pub"
+    work = "!git config user.email '{{ work.email }}' && git config user.signingkey {{ work.ssh }}.pub"
+{{else}}
+[user]
+    name = Soorya U
+    email = {{ self.email }}
+    signingkey = {{ self.ssh }}.pub
+{{/if}}
+
+[gpg]
+    format = ssh
+
+[commit]
+    gpgsign = true
+
+[init]
+    defaultBranch = main
+
+{{#if has_work_github}}
+[url "git@github.work:"]
+    insteadOf = https://github.com/
+{{else}}
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+{{/if}}
