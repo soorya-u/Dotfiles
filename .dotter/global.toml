@@ -8,6 +8,10 @@ languages = ["nodejs", "python"]
 "vscode/settings.json" = { target = "~/.config/Code/User/settings.json", type = "symbolic" }
 "vscode/keybindings.json" = { target = "~/.config/Code/User/keybindings.json", type = "symbolic" }
 
+[windsurf.files]
+"windsurf/settings.json" = { target = "~/.config/Windsurf/User/settings.json", type = "symbolic" }
+"windsurf/keybindings.json" = { target = "~/.config/Windsurf/User/keybindings.json", type = "symbolic" }
+
 [wezterm.files]
 "wezterm/wezterm.lua" = { target = "~/.config/wezterm/wezterm.lua", type = "symbolic" }
 
