@@ -157,7 +157,7 @@ detect_extensions = ['py']
 pyenv_version_name = true
 python_binary = ['python', 'python3']
 pyenv_prefix = 'env'
-detect_files = ['__init__.py', 'requirements.txt']
+detect_files = ['__init__.py', 'requirements.txt', 'pyproject.toml']
 disabled = false
 
 [rust]
@@ -175,7 +175,7 @@ format = '[\[$symbol($version)\]]($style)'
 version_format = 'v${major}.${minor}'
 symbol = ' '
 detect_extensions = ['zig']
-detect_files = ['Cargo.toml']
-detect_folders = []
+detect_files = ['zig.build', 'build.zig.zon']
+detect_folders = ['']
 style = '214'
 disabled = false
