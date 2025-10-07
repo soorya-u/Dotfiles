@@ -8,7 +8,7 @@ packages = ["powershell", "starship", "vscode"]
 has_work_github = true
 self = { email = "johndoe@example.com", ssh = "~/.ssh/github/id_ed25519_self" }
 work = { email = "johndoe@acme.com", ssh = "~/.ssh/github/id_ed25519_work" }
-
+languages = ["nodejs", "python", "golang"] # extend this based on starship supported languages
 
 # For Personal
 # [variables]

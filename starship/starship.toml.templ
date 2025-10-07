@@ -1,7 +1,7 @@
 add_newline = true
 command_timeout = 1000
 format = """
-[╭╴](238)$os$directory$git_branch$git_status$c$dart$java$nodejs$php$python$solidity
+[╭╴](238)$os$directory$git_branch$git_status{{#each languages}}${{this}}{{/each}}
 [╰─](238)$character"""
 
 [character]

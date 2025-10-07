@@ -1,6 +1,9 @@
 [starship.files]
 "starship/starship.toml.templ" = { target = "~/.config/starship.toml", type = "template" }
 
+[starship.variables]
+languages = ["nodejs", "python"]
+
 [vscode.files]
 "vscode/settings.json" = { target = "~/.config/Code/User/settings.json", type = "symbolic" }
 "vscode/keybindings.json" = { target = "~/.config/Code/User/keybindings.json", type = "symbolic" }
