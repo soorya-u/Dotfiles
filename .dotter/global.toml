@@ -1,5 +1,5 @@
 [starship.files]
-"starship/starship.toml.templ" = { target = "~/.config/starship.toml", type = "template" }
+"starship/starship.toml.hbs" = { target = "~/.config/starship.toml", type = "template" }
 
 [starship.variables]
 languages = ["nodejs", "python"]
@@ -16,10 +16,10 @@ languages = ["nodejs", "python"]
 "wezterm/wezterm.lua" = { target = "~/.config/wezterm/wezterm.lua", type = "symbolic" }
 
 [ssh.files]
-"ssh/config.templ" = { target = "~/.ssh/config", type = "template" }
+"ssh/config.hbs" = { target = "~/.ssh/config", type = "template" }
 
 [git.files]
-"git/.gitconfig.templ" = { target = "~/.gitconfig", type = "template" }
+"git/.gitconfig.hbs" = { target = "~/.gitconfig", type = "template" }
 
 [packages.variables]
 has_work_github = false
