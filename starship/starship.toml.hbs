@@ -1,7 +1,7 @@
 add_newline = true
 command_timeout = 1000
 format = """
-[╭╴](238)$os$directory$git_branch$git_status{{#each languages}}${{this}}{{/each}}
+[╭╴](238)$os$directory$git_branch$git_status{{#each languages}}${{this}}{{/each}}${custom.gh}
 [╰─](238)$character"""
 
 [character]
@@ -51,7 +51,7 @@ format = '[$path]({{ directory_style }})[$read_only]($read_only_style) '
 # Shows current git branch
 
 [git_branch]
-symbol = '   '
+symbol = ' '
 format = 'on [${symbol}(${branch})]($style)'
 # truncation_length = 4
 truncation_symbol = ' …/'
@@ -73,11 +73,6 @@ modified = '  '
 staged = ' [++\($count\)](green)'
 renamed = ' 襁 '
 deleted = '  '
-
-# Shows kubernetes context and namespace
-[kubernetes]
-format = 'via [󱃾 $context\($namespace\)](bold purple) '
-disabled = false
 
 # ---
 
@@ -179,3 +174,11 @@ detect_files = ['zig.build', 'build.zig.zon']
 detect_folders = ['']
 style = '214'
 disabled = false
+
+[custom.gh]
+command = "grep 'user:' ~/.config/gh/hosts.yml | head -n1 | awk '{print $2}'"
+when = true
+style = '15'
+symbol = '󰊤 '
+format = '[\[$symbol($output)\]]($style)'
+require_repo = true

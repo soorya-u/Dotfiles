@@ -1,13 +1,9 @@
 local wezterm = require("wezterm")
 
-local config = {}
-
-if wezterm.config_builder then
-    config = wezterm.config_builder()
-end
+local config = wezterm.config_builder()
 
 -- Font
-config.font = wezterm.font_with_fallback({"JetBrainsMono Nerd Font"})
+config.font = wezterm.font_with_fallback({ "JetBrainsMono Nerd Font" })
 config.font_size = 13.0
 
 -- Theme and Color
@@ -27,7 +23,6 @@ config.colors = {
 }
 
 -- Window appearance
-config.window_decorations = "NONE" -- removes titlebar like Ghostty
 config.window_padding = {
     left = 8,
     right = 8,
@@ -40,7 +35,7 @@ config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
 -- Shell
-config.default_prog = {"zsh"}
+config.default_prog = { "zsh" }
 
 -- Quick terminal (dropdown-like)
 config.leader = {
@@ -48,7 +43,7 @@ config.leader = {
     mods = "CTRL",
     timeout_milliseconds = 1000
 }
-config.keys = {{
+config.keys = { {
     key = "c",
     mods = "CTRL",
     action = wezterm.action.CopyTo("Clipboard")
@@ -64,7 +59,7 @@ config.keys = {{
     key = "j",
     mods = "CTRL",
     action = wezterm.action.TogglePaneZoomState
-}}
+} }
 
 -- Ghostty-like smoothness
 config.animation_fps = 120
