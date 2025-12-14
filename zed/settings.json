@@ -36,9 +36,8 @@
   // Language Settings
   "languages": {
     "Python": {
-      // "language_servers": ["!basedpyright", "pyrefly"],
+      "language_servers": ["!basedpyright", "ruff", "ty"],
       "formatter": [{ "language_server": { "name": "ruff" } }]
-    },
-    "Lua": {}
+    }
   }
 }

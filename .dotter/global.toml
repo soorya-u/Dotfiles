@@ -21,6 +21,9 @@ languages = ["nodejs", "python"]
 [git.files]
 "git/.gitconfig.hbs" = { target = "~/.gitconfig", type = "template" }
 
+[zed.files]
+"zed/settings.json" = { target = "~/.config/zed/settings.json", type = "symbolic" }
+
 [packages.variables]
 has_work_github = false
 

@@ -7,6 +7,7 @@ my_paths=(
     "/snap/bin" # snap binaries
     "$HOME/.zvm/bin"
     "$ZVM_INSTALL"
+    "/opt/flutter/bin"
 )
 
 # Loop through and add only if directory exists and not already in PATH

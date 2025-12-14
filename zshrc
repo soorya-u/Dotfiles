@@ -16,3 +16,4 @@ for s in "${scripts[@]}"; do
     scriptPath="$SCRIPT_DIR/$s"
     [[ -s "$scriptPath" ]] && . "$scriptPath"
 done
+
