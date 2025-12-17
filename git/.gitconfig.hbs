@@ -4,15 +4,20 @@
     email = {{ work.email }}
     signingkey = {{ work.ssh }}.pub
 
-[alias]
-    self =  "!git config user.email '{{ self.email }}' && git config user.signingkey {{ self.ssh }}.pub"
-    work = "!git config user.email '{{ work.email }}' && git config user.signingkey {{ work.ssh }}.pub"
 {{else}}
 [user]
     name = Soorya U
     email = {{ self.email }}
     signingkey = {{ self.ssh }}.pub
 {{/if}}
+
+[alias]
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+{{#if has_work_github}}
+    self =  "!git config user.email '{{ self.email }}' && git config user.signingkey {{ self.ssh }}.pub"
+    work = "!git config user.email '{{ work.email }}' && git config user.signingkey {{ work.ssh }}.pub"
+{{/if}}
+
 
 [gpg]
     format = ssh

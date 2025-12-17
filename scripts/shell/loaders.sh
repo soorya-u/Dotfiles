@@ -4,7 +4,8 @@ source_files=(
   "$NVM_DIR/nvm.sh" # nvm loader
   "$NVM_DIR/bash_completion" # nvm bash_completion
   "$HOME/.antigen/antigen.zsh" # antigen.zsh
-  "$HOME/.cargo/env" # Rust 
+  "$HOME/.cargo/env" # Rust
+  "$HOME/.sdkman/bin/sdkman-init.sh" # sdkman - Java Version Manager
 )
 
 for s in "${source_files[@]}"; do
