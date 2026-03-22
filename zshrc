@@ -4,8 +4,8 @@ SCRIPT_DIR="$HOME/.dotfiles/scripts/shell"
 
 scripts=(
     aliases.sh
-    env.sh
-    path.sh
+    # env.sh
+    # path.sh
     loaders.sh
     plugins.sh
     extras.sh

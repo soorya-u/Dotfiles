@@ -6,10 +6,11 @@ packages = ["powershell", "starship", "vscode"]
 # For Professional
 [variables]
 has_work_github = true
-self = { email = "johndoe@example.com", ssh = "~/.ssh/github/id_ed25519_self" }
-work = { email = "johndoe@acme.com", ssh = "~/.ssh/github/id_ed25519_work" }
+# id here is github id
+self = { email = "johndoe@example.com", ssh = "~/.ssh/github/id_ed25519_self", id = "johndoe-self" }
+work = { email = "johndoe@acme.com", ssh = "~/.ssh/github/id_ed25519_work", id = "johndoe-work" }
 languages = ["nodejs", "python", "golang"] # extend this based on starship supported languages
 
 # For Personal
 # [variables]
-# self = { email = "johndoe@example.com", ssh = "~/.ssh/github/self" }
+# self = { email = "johndoe@example.com", ssh = "~/.ssh/github/self", id = "johndoe-self" }

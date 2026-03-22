@@ -1,6 +1,10 @@
 [zsh.files]
 zshrc = { target = "~/.zshrc", type = "symbolic" }
 
+[environment.files]
+"environment.d/env.conf" = { target = "~/.config/environment.d/env.conf", type = "symbolic" }
+"environment.d/path.conf" = { target = "~/.config/environment.d/path.conf", type = "symbolic" }
+
 [starship.variables]
 primary_color = 202
 directory_style = 214
