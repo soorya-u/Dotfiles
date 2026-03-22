@@ -8,6 +8,7 @@ my_paths=(
     "$HOME/.zvm/bin"
     "$ZVM_INSTALL"
     "/opt/flutter/bin"
+    "$HOME/.local/share/pnpm"
 )
 
 # Loop through and add only if directory exists and not already in PATH

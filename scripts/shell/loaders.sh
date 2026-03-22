@@ -6,6 +6,7 @@ source_files=(
   "$HOME/.antigen/antigen.zsh" # antigen.zsh
   "$HOME/.cargo/env" # Rust
   "$HOME/.sdkman/bin/sdkman-init.sh" # sdkman - Java Version Manager
+  "$HOME/.bun/_bun"
 )
 
 for s in "${source_files[@]}"; do
