@@ -18,10 +18,5 @@ done
 
 # Starship
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
-
-# --- SSH agent setup ---
-if ! pgrep -u "$USER" ssh-agent >/dev/null; then
-  eval "$(ssh-agent -s 2>/dev/null)" >/dev/null
-fi
-
-ssh-add -l &>/dev/null || ssh-add ~/.ssh/github/id_* 2>/dev/null
+command -v mise >/dev/null 2>&1 && eval "$(mise activate zsh)"
+command -v keychain >/dev/null 2>&1 && eval "$(keychain --eval --quiet --agents ssh ~/.ssh/github/id_*)"
